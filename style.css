@@ -1,0 +1,216 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#app-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin-top: 100px; /* Header биіктігінен кейін бастау үшін */
+    margin-bottom: 50px;
+}
+
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.screen.active {
+    display: block;
+}
+
+h2, h3 {
+    color: #007bff;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Мәзір түймелерінің стилі */
+.menu-options button, .variant-options button {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-options button:hover, .variant-options button:hover {
+    background-color: #218838;
+}
+
+.menu-options button:active, .variant-options button:active {
+    transform: scale(0.99);
+}
+
+.menu-options .emoji {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+/* Тест сұрақтарының стилі */
+#question-container h3 {
+    color: #333;
+    border-bottom: none;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+}
+
+.option-label {
+    display: block;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-label:hover {
+    background-color: #e2e6ea;
+    border-color: #007bff;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Басқару түймелері */
+.quiz-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz-controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-button {
+    background-color: #007bff;
+    color: white;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+#finish-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+#finish-button:hover {
+    background-color: #c82333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#progress-text {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Нәтижелер беті */
+.results-summary p {
+    font-size: 1.1em;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e9ecef;
+}
+
+.results-summary p:last-child {
+    border-bottom: none;
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#incorrect-answers {
+    background-color: #fff3f3;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.incorrect-answer-item {
+    padding: 10px 0;
+    border-bottom: 1px dotted #e9ecef;
+}
+
+.incorrect-answer-item:last-child {
+    border-bottom: none;
+}
+
+.incorrect-answer-item strong {
+    color: #dc3545;
+}
+
+.back-button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+#no-incorrect-answers {
+    color: #28a745;
+    font-style: italic;
+    font-weight: bold;
+}

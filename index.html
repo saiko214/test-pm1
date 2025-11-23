@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Маманы Тест | 150 Сұрақ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>IT Маманы Тест</h1>
+    </header>
+
+    <main id="app-container">
+        
+        <section id="main-menu" class="screen active">
+            <h2>Тест Режимін Таңдаңыз</h2>
+            <div class="menu-options">
+                <button onclick="showVariantSelection()">
+                    <span class="emoji">📚</span>
+                    1. Барлық 150 Сұраққа Жауап Беру
+                </button>
+                <button onclick="startRandomTest()">
+                    <span class="emoji">🎲</span>
+                    2. Кездейсоқ 30 Сұраққа Жауап Беру
+                </button>
+            </div>
+        </section>
+
+        <section id="variant-selection" class="screen">
+            <h2>Тест Вариантын Таңдаңыз (30 Сұрақтан)</h2>
+            <div class="variant-options">
+                <button onclick="startSpecificTest('variant1')">1-Вариант (Сұрақтар 1-30)</button>
+                <button onclick="startSpecificTest('variant2')">2-Вариант (Сұрақтар 31-60)</button>
+                <button onclick="startSpecificTest('variant3')">3-Вариант (Сұрақтар 61-90)</button>
+                <button onclick="startSpecificTest('variant4')">4-Вариант (Сұрақтар 91-120)</button>
+                <button onclick="startSpecificTest('variant5')">5-Вариант (Сұрақтар 121-150)</button>
+            </div>
+            <button class="back-button" onclick="showMainMenu()">⬅️ Артқа</button>
+        </section>
+
+        <section id="quiz-screen" class="screen">
+            <h2 id="quiz-title">Тест</h2>
+            <div id="question-container">
+                </div>
+            <div class="quiz-controls">
+                <button id="next-button" onclick="nextQuestion()">Келесі Сұрақ</button>
+                <button id="finish-button" class="hidden" onclick="finishTest()">Тестті Аяқтау</button>
+            </div>
+            <p id="progress-text"></p>
+        </section>
+
+        <section id="results-screen" class="screen">
+            <h2>🎉 Тест Нәтижелері</h2>
+            <div class="results-summary">
+                <p><strong>1. Дұрыс жауаптар саны:</strong> <span id="correct-count">0</span></p>
+                <p><strong>2. Дұрыс жауап пайызы:</strong> <span id="percentage">0%</span> (100%-дан)</p>
+                <p><strong>4. Жалпы балл:</strong> <span id="score">0</span> / 100</p>
+            </div>
+            
+            <h3 class="incorrect-answers-title">3. Қате жауаптар тізімі:</h3>
+            <div id="incorrect-answers">
+                <p id="no-incorrect-answers">Қате жауаптар жоқ. Тамаша!</p>
+            </div>
+            
+            <button class="back-button" onclick="showMainMenu()">Басты Мәзірге Оралу</button>
+        </section>
+
+    </main>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
